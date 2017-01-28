@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Fashion Fetish';
+  src: url('/assets/font/FashionFetishSmallCaps.ttf');
+}
+
+body {
+  background-color: #2c4e8e;
+  display: flex;
+  flex-direction: column;
+}
+
+.album {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.artist-name,
+.album-title {
+  font-family: 'Fashion Fetish', sans-serif;
+  text-align: center;
+  transition-timing-function: ease-in-out;
+  transition: 2s;
+  transform: translateY(-400%);
+}
+.reveal-headers {
+  transform: translateY(0%);
+}
+
+.album-title {
+  color: whitesmoke;
+}
