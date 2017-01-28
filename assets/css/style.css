@@ -16,16 +16,46 @@ body {
   min-height: 100vh;
 }
 
+h1 {
+  font-size: 60px;
+}
+h2 {
+  font-size: 40px;
+}
+
+@media screen and (max-width: 500px) {
+  h1 { font-size: 35px; }
+  h2 { font-size: 25px; }
+}
+
 .artist-name,
 .album-title {
   font-family: 'Fashion Fetish', sans-serif;
   text-align: center;
   transition-timing-function: ease-in-out;
   transition: 2s;
-  transform: translateY(-400%);
+  transform: translateY(-550%);
 }
 .reveal-headers {
+  animation: appear 5s;
   transform: translateY(0%);
+}
+
+.city {
+  animation: appear 6s;
+  background-image: url('/assets/images/city.png');
+  background-repeat: repeat-x;
+  display: block;
+  height: 240px;
+}
+
+@keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
 }
 
 .album-title {
