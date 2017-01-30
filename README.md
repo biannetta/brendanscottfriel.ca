@@ -1,2 +1,2 @@
 # brendanscottfriel.ca
-![alt tag](/assets/images/album-cover.jpg)
+![alt tag](/public/assets/images/album-cover.jpg)
