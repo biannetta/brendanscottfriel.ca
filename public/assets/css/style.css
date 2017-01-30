@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #2c4e8e;
+  background: linear-gradient(#2b3a7d, #2c4e8e);
   display: flex;
   flex-direction: column;
 }
@@ -24,8 +24,8 @@ h2 {
 }
 
 @media screen and (max-width: 500px) {
-  h1 { font-size: 35px; }
-  h2 { font-size: 25px; }
+  h1 { font-size: 30px; }
+  h2 { font-size: 22px; }
 }
 
 .artist-name,
@@ -36,18 +36,18 @@ h2 {
   transition: 2s;
   transform: translateY(-550%);
 }
-.reveal-headers {
-  animation: appear 5s;
-  transform: translateY(0%);
-}
-
 .city {
-  animation: appear 6s;
   background-image: url('/assets/images/city.png');
   background-repeat: repeat-x;
   display: block;
   height: 240px;
+  transform: translateY(400%);
 }
+.reveal {
+  animation: appear 5s;
+  transform: translateY(0%);
+}
+
 
 @keyframes appear {
     0% {
@@ -60,4 +60,7 @@ h2 {
 
 .album-title {
   color: whitesmoke;
+}
+.album-bottom {
+  overflow: hidden;
 }
