@@ -23,11 +23,6 @@ h2 {
   font-size: 40px;
 }
 
-@media screen and (max-width: 500px) {
-  h1 { font-size: 30px; }
-  h2 { font-size: 22px; }
-}
-
 .artist-name,
 .album-title {
   font-family: 'Fashion Fetish', sans-serif;
@@ -37,18 +32,68 @@ h2 {
   transform: translateY(-550%);
 }
 .city {
+  align-items: flex-end;
   background-image: url('/assets/images/city.png');
   background-repeat: repeat-x;
-  display: block;
+  display: flex;
   height: 240px;
+  justify-content: center;
   transform: translateY(400%);
 }
+
+.album-title {
+  color: whitesmoke;
+}
+.social-media {
+  display: flex;
+  justify-content: space-around;
+}
+.social-media > a {
+  opacity: 0.7;
+}
+.social-media > a:hover {
+  opacity: 1;
+}
+.fb-link {
+  transition-timing-function: ease-in-out;
+  transition: 2s;
+  transform: translateX(-1000%);
+}
+.sc-link {
+  transition-timing-function: ease-in-out;
+  transition: 2s;
+  transform: translateX(1000%);
+}
+.announcement {
+  animation: appear 15s;
+  color: whitesmoke;
+  display: flex;
+  font-family: 'Fashion Fetish', sans-serif;
+  font-size: 20px;
+  justify-content: center;
+}
+.album-bottom {
+  overflow: hidden;
+}
+.copyright {
+  color: whitesmoke;
+  font-family: 'Fashion Fetish', sans-serif;
+  font-size: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  h1 { font-size: 30px; }
+  h2 { font-size: 22px; }
+  .announcement { font-size: 15px; }
+}
+
 .reveal {
   animation: appear 5s;
   transform: translateY(0%);
 }
-
-
+.shift {
+  transform: translateX(0%);
+}
 @keyframes appear {
     0% {
       opacity: 0;
@@ -56,11 +101,4 @@ h2 {
     100% {
       opacity: 1;
     }
-}
-
-.album-title {
-  color: whitesmoke;
-}
-.album-bottom {
-  overflow: hidden;
 }
