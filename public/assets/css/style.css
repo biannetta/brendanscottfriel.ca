@@ -38,38 +38,43 @@ h2 {
   display: flex;
   height: 240px;
   justify-content: center;
-  transform: translateY(400%);
 }
 
 .album-title {
   color: whitesmoke;
 }
-.social-media {
+.social-links {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
-.social-media > a {
-  opacity: 0.7;
+.social-links > a {
+  color: whitesmoke;
+  font-size: 30px;
+  opacity: 0.5;
+  padding: 0 10px;
+  transition: 0.5s;
 }
-.social-media > a:hover {
+.fb:hover {
+  color: #4267b2;
   opacity: 1;
 }
-.fb-link {
-  transition-timing-function: ease-in-out;
-  transition: 2s;
-  transform: translateX(-1000%);
+.sc:hover {
+  color: #f50;
+  opacity: 1;
 }
-.sc-link {
-  transition-timing-function: ease-in-out;
-  transition: 2s;
-  transform: translateX(1000%);
+.sp:hover {
+  color: #6ae368;
+  opacity: 1;
 }
+
 .announcement {
-  animation: appear 15s;
+  align-items: center;
+  animation: appear .5s;
   color: whitesmoke;
   display: flex;
+  flex-direction: column;
   font-family: 'Fashion Fetish', sans-serif;
-  font-size: 20px;
+  font-size: 40px;
   justify-content: center;
 }
 .album-bottom {
