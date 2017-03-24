@@ -4,23 +4,29 @@
 }
 
 body {
-  background: linear-gradient(#2b3a7d, #2c4e8e);
+  background-image: url('/assets/images/city.png'), linear-gradient(#2b3a7d, #2c4e8e);
+  background-repeat: repeat-x;
+  background-position: bottom;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .album {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 100vh;
 }
 
 h1 {
   font-size: 60px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 5px;
 }
 h2 {
   font-size: 40px;
+  margin-top: 5px;
 }
 
 .artist-name,
@@ -31,21 +37,17 @@ h2 {
   transition: 2s;
   transform: translateY(-550%);
 }
-.city {
-  align-items: flex-end;
-  background-image: url('/assets/images/city.png');
-  background-repeat: repeat-x;
-  display: flex;
-  height: 240px;
-  justify-content: center;
-}
-
 .album-title {
   color: whitesmoke;
 }
 .social-links {
-  display: flex;
-  justify-content: center;
+  background-color: #080a13;
+  display: block;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100vw;
+  z-index: 1000;
 }
 .social-links > a {
   color: whitesmoke;
@@ -72,24 +74,34 @@ h2 {
   animation: appear .5s;
   color: whitesmoke;
   display: flex;
-  flex-direction: column;
   font-family: 'Fashion Fetish', sans-serif;
   font-size: 40px;
-  justify-content: center;
+  justify-content: space-around;
 }
-.album-bottom {
-  overflow: hidden;
+.itunes {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 .copyright {
+  bottom: 0;
   color: whitesmoke;
+  display: block;
   font-family: 'Fashion Fetish', sans-serif;
   font-size: 10px;
+  padding-bottom: 5px;
+  position: fixed;
+  text-align: center;
+  width: 100vw;
 }
 
 @media screen and (max-width: 700px) {
   h1 { font-size: 30px; }
   h2 { font-size: 22px; }
-  .announcement { font-size: 15px; }
+  .announcement {
+    font-size: 15px;
+    flex-direction: column-reverse;
+  }
 }
 
 .reveal {
