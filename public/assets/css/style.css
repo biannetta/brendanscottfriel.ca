@@ -68,6 +68,10 @@ h2 {
   color: #6ae368;
   opacity: 1;
 }
+.ig:hover {
+  color: aliceblue;
+  opacity: 1;
+}
 
 .announcement {
   align-items: center;
