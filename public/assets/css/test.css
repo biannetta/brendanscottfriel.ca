@@ -1,0 +1,144 @@
+@font-face {
+  font-family: 'Fashion Fetish';
+  src: url('/assets/font/FashionFetishSmallCaps.ttf');
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+  min-height: 100vh;
+}
+.bgimg {
+  background-attachment: scroll;
+  background-image: url("/assets/images/brendan-skyline.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  opacity: 0.65;
+  position: fixed;
+  width: 100vw;
+  z-index: -1;
+}
+.album {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+h2 {
+  font-size: 40px;
+  margin-top: 5px;
+}
+
+.artist-name,
+.album-title {
+  font-family: 'Fashion Fetish', sans-serif;
+  text-align: center;
+}
+.album-title {
+  color: whitesmoke;
+}
+.social-links {
+  padding: 10px 0;
+  text-align: right;
+  top: 0;
+  width: 100vw;
+  z-index: 1000;
+}
+.social-links > a {
+  color: whitesmoke;
+  font-size: 30px;
+  opacity: 0.5;
+  padding: 0 10px;
+}
+.fb:hover {
+  color: #4267b2;
+  opacity: 1;
+}
+.sc:hover {
+  color: #f50;
+  opacity: 1;
+}
+.sp:hover {
+  color: #6ae368;
+  opacity: 1;
+}
+.ig:hover {
+  color: aliceblue;
+  opacity: 1;
+}
+.content {
+  flex: 1;
+}
+.announcement {
+  align-items: center;
+  display: flex;
+  font-size: 40px;
+  height: 50vh;
+  justify-content: space-around;
+}
+.music {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  padding: 15px;
+}
+.music-hero {
+  text-align: center;
+}
+.music-links {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-around;
+}
+.music-links > a {
+  color: black;
+  padding: 8px;
+  text-decoration: none;
+}
+.music-links > a:hover {
+  background-color: rgba(255,255,255, 0.9);
+  border-radius: 5px;
+}
+.news {
+  font-size: 30px;
+}
+.news > ul {
+  list-style: none;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+}
+.copyright {
+  color: black;
+  font-size: 15px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  h1 { font-size: 30px; }
+  h2 { font-size: 22px; }
+  .announcement {
+    font-size: 15px;
+    flex-direction: column-reverse;
+  }
+  .music {
+    font-size: 20px;
+  }
+  .music-links > a {
+    font-size: 15px;
+  }
+  .copyright {
+    font-size: 10px;
+  }
+}
