@@ -28,8 +28,8 @@
     <link rel='stylesheet' href='assets/css/test.css' />
     
     <!-- Scripts -->
-    <script async src='assets/js/main.js'></script>
     <script type="text/javascript" src="assets/js/instafeed.min.js" async></script>    
+    <script async src='assets/js/main.js'></script>
 
     <!-- App Manifesto -->
     <link rel="manifest" href="manifest.json" />
@@ -56,13 +56,10 @@
     </div>
     <div class="content">
       <div class="music feed">
-        <!-- <span class="music-links">
-          <a href="https://geo.itunes.apple.com/us/album/quiet-cars/id1206176776?mt=1&app=music"><i class="fa fa-apple" aria-hidden="true"></i> iTunes</a>
-          <a href="https://open.spotify.com/artist/5vNnd22Abu2VEsMZFdbRYQ"><i class="fa fa-spotify" aria-hidden="true"></i> Spotify</a>
-        </span> -->
+        
       </div>
       <div class="instagram feed">
-
+        <div id="instafeed"></div>
       </div>
       <div class="youtube feed">
           
@@ -71,5 +68,15 @@
     <div class="footer">
       <span class="copyright">&copy; Copyright Brendan Scott Friel 2017</span>
     </div>
+    <script type="text/javascript">
+      (function() {
+        var feed = new Instafeed({
+          get: 'tagged',
+          tagName: 'awesome',
+          clientId: '1486470.aa30447.a6e9f20349ce4647b43486e634890acf'
+        });
+        feed.run();
+      })();
+    </script>
   </body>
 </html>
