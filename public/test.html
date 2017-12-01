@@ -28,8 +28,9 @@
     <link rel='stylesheet' href='assets/css/test.css' />
     
     <!-- Scripts -->
-    <script type="text/javascript" src="assets/js/instafeed.min.js" async></script>    
-    <script async src='assets/js/main.js'></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script async src='assets/js/main.js' type='text/javascript'></script>
+    <script async src='assets/js/store.js' type='text/javascript'></script>
 
     <!-- App Manifesto -->
     <link rel="manifest" href="manifest.json" />
@@ -55,28 +56,15 @@
       </div>
     </div>
     <div class="content">
-      <div class="music feed">
-        
-      </div>
       <div class="instagram feed">
         <div id="instafeed"></div>
       </div>
-      <div class="youtube feed">
-          
-      </div>          
+      <div class="shopify feed">
+          <div id='collection-component-46e08e509d1'></div>   
+      </div> 
     </div>
     <div class="footer">
       <span class="copyright">&copy; Copyright Brendan Scott Friel 2017</span>
     </div>
-    <script type="text/javascript">
-      (function() {
-        var feed = new Instafeed({
-          get: 'tagged',
-          tagName: 'awesome',
-          clientId: '1486470.aa30447.a6e9f20349ce4647b43486e634890acf'
-        });
-        feed.run();
-      })();
-    </script>
   </body>
 </html>
