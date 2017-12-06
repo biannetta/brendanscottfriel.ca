@@ -1,7 +1,7 @@
 $(document).ready(function() {
-  var token = '1486470.aa30447.a6e9f20349ce4647b43486e634890acf',
-  userid = 1486470,
-  num_photos = 6; 
+  var token = '3016048789.28578ca.c7bf8046303941fda6ea61b6f97e5eee',
+  userid = 3016048789,
+  num_photos = 5; 
 
   $.ajax({
     url: 'https://api.instagram.com/v1/users/' + userid + '/media/recent', // or /users/self/media/recent for Sandbox
