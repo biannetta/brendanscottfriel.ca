@@ -44,7 +44,23 @@ h2 {
   margin-top: 5px;
   text-shadow: 1px 2px #737373;
 }
-
+.navbar {
+  align-items: center;
+  background-color:rgba(43, 40, 40, 0.7);
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  padding: 10px 0;
+  text-align: right;
+  top: 0;
+  width: 100vw;
+  z-index: 1000;
+}
+.mini-title {
+  color: whitesmoke;
+  font-family: 'Fashion Fetish', sans-serif;
+  font-size: 20px;
+}
 .artist-name,
 .album-title {
   font-family: 'Fashion Fetish', sans-serif;
@@ -54,12 +70,7 @@ h2 {
   color: whitesmoke;
 }
 .social-links {
-  position: fixed;
-  padding: 10px 0;
-  text-align: right;
-  top: 0;
-  width: 100vw;
-  z-index: 1000;
+  align-self: flex-end;
 }
 .social-links > a {
   color: whitesmoke;
@@ -84,14 +95,23 @@ h2 {
   opacity: 1;
 }
 .content {
-  flex: 1;
   margin: auto;
-  margin-bottom: 10px;
-  opacity: 0.9;
-  width: 100vw;  
+  width: 90vw;
 }
-.feed {
-  background-color: gray;
+#instafeed {
+  align-content: flex-start;
+  display: flex;
+  flex-flow: column wrap;
+  flex-shrink: 1;
+  height: 1000px;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+.insta-title {
+  color: whitesmoke;
+  font-family: 'Fashion Fetish', sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
 }
 .music {
   align-items: stretch;

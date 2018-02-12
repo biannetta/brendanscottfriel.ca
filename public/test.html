@@ -19,30 +19,34 @@
     <meta name="author" content="Brendan Scott Friel">
 
     <!-- Font Awesome -->
-    <script async src="https://use.fontawesome.com/2e823e643e.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Stylesheet -->
     <link rel='stylesheet' href='assets/css/test.css' />
-    
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script async src='assets/js/main.js' type='text/javascript'></script>
-    <script async src='assets/js/store.js' type='text/javascript'></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 
     <!-- App Manifesto -->
     <link rel="manifest" href="manifest.json" />
   </head>
   <body>
     <div class="bgimg"></div>
-    <div class="social-links">
-      <a class="fb" href="https://www.facebook.com/brendanscottfriel"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-      <a class="ig" href="https://www.instagram.com/brendanscottfriel/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-      <a class="sc" href="https://soundcloud.com/user-327580824"><i class="fa fa-soundcloud" aria-hidden="true"></i></a>
-      <a class="sp" href="https://open.spotify.com/artist/5vNnd22Abu2VEsMZFdbRYQ"><i class="fa fa-spotify" aria-hidden="true"></i></a>
-      <span class="follow"><iframe src="https://embed.spotify.com/follow/1/?uri=spotify:artist:5vNnd22Abu2VEsMZFdbRYQ&size=basic&theme=light&show-count=0" width="100" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe></span>
+    <div class="navbar" data-aos="fade-down" data-aos-anchor="#trigger-nav">
+      <span class="mini-title">@brendanscottfriel</span>
+      <div class="social-links">
+        <a class="fb" href="https://www.facebook.com/brendanscottfriel"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
+        <a class="ig" href="https://www.instagram.com/brendanscottfriel/?hl=en"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a class="sc" href="https://soundcloud.com/user-327580824"><i class="fab fa-soundcloud" aria-hidden="true"></i></a>
+        <a class="sp" href="https://open.spotify.com/artist/5vNnd22Abu2VEsMZFdbRYQ"><i class="fab fa-spotify" aria-hidden="true"></i></a>
+        <span class="follow"><iframe src="https://embed.spotify.com/follow/1/?uri=spotify:artist:5vNnd22Abu2VEsMZFdbRYQ&size=basic&theme=light&show-count=0" width="100" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe></span>
+      </div>
     </div>
     <div class="header">
       <div class="music-hero">
@@ -55,13 +59,14 @@
         <span>Debut Full Length Album. Available Now</span>
       </div>
     </div>
-    <div class="content">
+    <div class="content" id="trigger-nav">
       <div class="instagram feed">
+        <div data-aos="fade-down">
+          <i class="insta-title fab fa-instagram" aria-hidden="true"></i>
+          <span class="insta-title">Instagram</span>
+        </div>
         <div id="instafeed"></div>
       </div>
-      <div class="shopify feed">
-          <div id='collection-component-46e08e509d1'></div>   
-      </div> 
     </div>
     <div class="footer">
       <span class="copyright">&copy; Copyright Brendan Scott Friel 2017</span>

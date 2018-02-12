@@ -1,7 +1,7 @@
 $(document).ready(function() {
   var token = '3016048789.28578ca.c7bf8046303941fda6ea61b6f97e5eee',
   userid = 3016048789,
-  num_photos = 5; 
+  num_photos = 10; 
 
   $.ajax({
     url: 'https://api.instagram.com/v1/users/' + userid + '/media/recent', // or /users/self/media/recent for Sandbox
@@ -9,16 +9,25 @@ $(document).ready(function() {
     type: 'GET',
     data: {access_token: token, count: num_photos},
     success: function(data){
-      var list = $('#instafeed').append('<ul>');
+      var list = $('#instafeed');
       for( x in data.data ){
-        list.append('<li><img src="'+data.data[x].images.low_resolution.url+'"></li>'); // data.data[x].images.low_resolution.url - URL of image, 306х306
-        // data.data[x].images.thumbnail.url - URL of image 150х150
-        // data.data[x].images.standard_resolution.url - URL of image 612х612
-        // data.data[x].link - Instagram post URL 
+        list.append('<div data-aos="flip-up"><a href="'+data.data[x].images.thumbnail.url+'" target="_blank"><img src="'+data.data[x].images.low_resolution.url+'"></a></div>'); // data.data[x].images.low_resolution.url - URL of image, 306х306
       }
     },
     error: function(data){
       console.log(data); // send the error notifications to console
     }
+  });
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 19) {
+      $('.music-hero').fadeOut();
+    } else {
+      $('.music-hero').fadeIn();
+    }
+  });
+
+  AOS.init({
+    duration: 1200,
   });
 });
