@@ -33,7 +33,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-
 h1 {
   font-size: 60px;
   font-weight: 600;
@@ -115,9 +114,6 @@ h2 {
 .feed {
   margin-bottom: 20px;
 }
-.feed-header {
-  background-color: rgba(43, 40, 40, 0.7);
-}
 .feed-title {
   color: whitesmoke;
   font-family: 'Fashion Fetish', sans-serif;
@@ -176,14 +172,23 @@ h2 {
   .music-links > a {
     font-size: 15px;
   }
-  .news {
-    font-size: 20px;
+  .mini-title {
+    display: none;
   }
-  .social-links {
+  .header {
+    min-height: calc(60vh - 50px);
+  }
+  .navbar {
     align-items: baseline;    
-    background-color: rgba(43, 40, 40, 0.7);
     display: flex;
     justify-content: center;
+  }
+  #youtubefeed {
+    align-content: space-between;
+    flex-direction: column;
+  }
+  #youtubefeed > iframe {
+    width: 90vw;
   }
   .footer {
     background-color: rgba(43, 40, 40, 0.7);
