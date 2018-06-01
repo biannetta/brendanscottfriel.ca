@@ -12,42 +12,33 @@ body {
 }
 .bgimg {
   background-attachment: scroll;
-  background-image: url("/assets/images/brendan.jpg");
-  background-position: top;
+  background-image: url("/assets/images/brendan_header.jpg");
+  background-position: left;
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  opacity: 0.90;
-  position: fixed;
-  width: 100vw;
-  z-index: -1;
+  background-color: #1E1E20;
 }
 .header {
-  align-items: flex-end;
+  align-items: center;
   display: flex;
   justify-content: center;
   min-height: calc(90vh - 50px);
 }
-.album {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.hero {
+  font-family: 'Fashion Fetish', sans-serif;
+  text-align: center;
 }
 h1 {
   font-size: 60px;
   font-weight: 600;
   margin-bottom: 5px;
-}
-h2 {
-  font-size: 40px;
-  margin-top: 5px;
+  color: whitesmoke;
   text-shadow: 1px 2px #737373;
 }
 .navbar {
   align-items: center;
   background-color:rgba(43, 40, 40, 0.7);
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   position: fixed;
   padding: 10px 10px;
   text-align: right;
@@ -55,21 +46,8 @@ h2 {
   width: 100vw;
   z-index: 1000;
 }
-.mini-title {
-  color: whitesmoke;
-  font-family: 'Fashion Fetish', sans-serif;
-  font-size: 20px;
-}
-.artist-name,
-.album-title {
-  font-family: 'Fashion Fetish', sans-serif;
+.hero {
   text-align: center;
-}
-.album-title {
-  color: whitesmoke;
-}
-.social-links {
-  align-self: flex-end;
 }
 .social-links > a {
   color: whitesmoke;
@@ -93,42 +71,64 @@ h2 {
   color: aliceblue;
   opacity: 1;
 }
-.content {
-  margin: auto;
-  width: 90vw;
-}
-#instafeed {
-  align-content: flex-start;
-  display: flex;
-  flex-flow: column wrap;
-  flex-shrink: 1;
-  height: 1000px;
-  justify-content: flex-start;
-  overflow: hidden;
-}
-#youtubefeed {
-  align-content: center;
-  display: flex;
-  justify-content: space-between;
-}
 .feed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 10px 5px;
+  height: 500px;
+}
+.feed:nth-child(even) {
+  background-color: #1E1E20;
+}
+.feed-header {
   margin-bottom: 20px;
+  text-align: center;
 }
 .feed-title {
   color: whitesmoke;
   font-family: 'Fashion Fetish', sans-serif;
-  font-size: 20px;
-  font-weight: bolder;
+  font-size: 40px;
+  font-weight: 600;
 }
-.music {
-  align-items: stretch;
+.center-items {
   display: flex;
-  flex-direction: column;
-  font-size: 30px;
-  padding: 15px;
+  justify-content: center;
 }
-.music-hero {
-  text-align: center;
+.pic {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 5px;
+  width:  306px;
+  height: 306px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+.album {
+  width: 360px;
+  height: 360px;
+}
+.instagram {
+  border: 5px solid #fff;
+  margin: 5px;
+  width:  306px;
+  height: 306px;
+}
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: whitesmoke;
+  background-color: #1E1E20;
+  opacity: 0;
+  width: 100%;
+}
+.pic:hover .overlay {
+  opacity: 0.9;
 }
 .music-links {
   display: flex;
@@ -150,10 +150,11 @@ h2 {
 .footer {
   display: flex;
   justify-content: center;
-  padding-top: 5px;
+  padding-top: 15px;
+  background-color: #1E1E20;
 }
 .copyright {
-  color: black;
+  color: whitesmoke;
   font-size: 15px;
   padding-bottom: 5px;
   text-align: center;
