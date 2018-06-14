@@ -123,6 +123,9 @@ h1 {
   width:  306px;
   height: 306px;
 }
+#youtubefeed-mobile-only {
+  display: none;
+}
 .video {
   margin: 5px;
 }
@@ -157,18 +160,22 @@ h1 {
   h1 { font-size: 30px; }
   h2 { font-size: 22px; }
   .header {
-    min-height: calc(60vh - 50px);
+    min-height: calc(60vh - 50px); 
   }
-  .navbar {
-    align-items: baseline;    
+  .feed {
+    flex-direction: column;
+  }
+  #instafeed > a:not(:first-child) {
+    display: none;
+  }
+  #youtubefeed {
+    display: none;
+  }
+  #youtubefeed-mobile-only {
     display: flex;
-    justify-content: center;
   }
-  .footer {
-    background-color: rgba(43, 40, 40, 0.7);
-  }
-  .copyright {
+ .copyright {
     color: whitesmoke;
-    font-size: 10px;
+    font-size: 15px;
   }
 }
