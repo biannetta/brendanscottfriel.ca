@@ -13,7 +13,7 @@ $(document).ready(function() {
       for( x in data.data ){
         var image = data.data[x];
         console.log(image);
-        list.append('<a style="text-decoration: none;" href="'+image.link+'" target="_blank"><div data-likes="'+image.likes.count+'" class="instagram pic" style="background-image:url('+image.images.low_resolution.url+');"><span class="overlay"><i class="fas fa-heart"></i> '+image.likes.count+'</span></div></a>');
+        list.append('<a style="text-decoration: none;" href="'+image.link+'" target="_blank"><div data-likes="'+image.likes.count+'" class="feed__row__item--instagram pic" style="background-image:url('+image.images.low_resolution.url+');"><span class="overlay"><i class="fas fa-heart"></i> '+image.likes.count+'</span></div></a>');
       }
     },
     error: function(data){

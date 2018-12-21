@@ -45,59 +45,111 @@
     <link rel="manifest" href="manifest.json" />
   </head>
   <body>
-    <div class="navbar">
-      <div class="social-links">
-        <a class="fb" href="https://www.facebook.com/brendanscottfriel"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-        <a class="ig" href="https://www.instagram.com/brendanscottfriel/?hl=en"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-        <a class="sp" href="https://open.spotify.com/artist/5vNnd22Abu2VEsMZFdbRYQ"><i class="fab fa-spotify" aria-hidden="true"></i></a>
-        <a class="ap" href="https://itunes.apple.com/ca/album/quiet-cars/1206176776"><i class="fab fa-apple" aria-hidden="true"></i></a>
-      </div>
-    </div>
-    <div class="header bgimg">
+    
+    <div class="header">
       <div class="hero">
-        <h1>brendan scott friel</h1>
+        <span class="hero__headline">brendan scott friel</span>
+        <div class="social">
+            <a class="social__link" href="https://www.facebook.com/brendanscottfriel"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a class="social__link" href="https://www.instagram.com/brendanscottfriel/?hl=en"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a class="social__link" href="https://open.spotify.com/artist/5vNnd22Abu2VEsMZFdbRYQ"><i class="fab fa-spotify" aria-hidden="true"></i></a>
+            <a class="social__link" href="https://itunes.apple.com/ca/album/quiet-cars/1206176776"><i class="fab fa-apple" aria-hidden="true"></i></a>
+          </div>
       </div>
+      <div class="navbar--vertical">
+        <a href="#music" class="navbar__item">&nbsp;&nbsp;music&nbsp;</a>
+        <a href="#social" class="navbar__item">&nbsp;&nbsp;social&nbsp;</a>
+        <a href="#videos" class="navbar__item">&nbsp;&nbsp;videos&nbsp;</a>
+        <a href="#shows" class="navbar__item">&nbsp;&nbsp;shows&nbsp;</a>
+        <a href="#footer" class="navbar__item">&nbsp;&nbsp;contact&nbsp;</a>
+      </div>
+      <!-- <div class="tagline--center">
+        "Quiet Cars"</br> Available Now
+      </div> -->
     </div>
-    <div class="feed">
-      <div class="feed-header">
-        <span class="title">quiet cars</span>
-        <span class="subtitle">Available Now</span>
+    
+    <div class="body">
+      <!-- Music -->
+      <div class="feed">
+        <a name="music"></a>
+        <span class="feed__header">&nbsp;&nbsp;music&nbsp;</span>
+        <div class="feed__row--wide">
+          <div class="feed__row__item--center">
+            <img src="assets/images/album-cover.jpg" />
+            <span class="tagline">Debut Album available on Spotify and iTunes</span>
+          </div>
+          <div class="feed__row__item">
+            <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/285191438&color=%23464859&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+          </div>
+        </div>
       </div>
-      <div class="center-items">
-        <div class="album pic" style="background:url('assets/images/album-cover.jpg')">
-          <div class="overlay">
-            <div class="center-column">
-              <a href="https://itunes.apple.com/ca/album/quiet-cars/1206176776"><img src="assets/images/get-it-on-itunes.svg" /></a>
-              <a href="https://open.spotify.com/artist/5vNnd22Abu2VEsMZFdbRYQ"><img src="assets/images/listen-on-spotify.png" /></a>
+      <!-- Social -->
+      <div class="feed">
+        <a name="social"></a>
+        <span class="feed__header">&nbsp;&nbsp;social&nbsp;</span>
+        <div class="feed__row" id="instafeed"></div>
+      </div>
+      <!-- Videos -->
+      <div class="feed">
+        <a name="videos"></a>
+        <span class="feed__header">&nbsp;&nbsp;videos&nbsp;</span>
+        <div class="feed__hero">
+          <iframe height="480" width="854" src="https://www.youtube.com/embed/YA9PzSaaek4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="feed__row">
+          <div class="feed__row__item">
+            <iframe class="video" src="https://www.youtube.com/embed/nzhUm3IKxnU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="feed__row__item">
+            <iframe class="video" src="https://www.youtube.com/embed/nzhUm3IKxnU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="feed__row__item">
+            <iframe class="video" src="https://www.youtube.com/embed/nzhUm3IKxnU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <!-- Shows -->
+      <div class="feed">
+        <a name="shows"></a>
+        <span class="feed__header">&nbsp;&nbsp;shows&nbsp;</span>
+        <div class="shows">
+          <div class="shows__item">
+            <div class="shows__item__column">
+              <span>SAT 22 DECEMBER</span>
+              <span>Kelseys Original Roadhouse</span>
+            </div>
+            <div class="shows__item__column--end">
+              <span>Windsor, ON, Canada</span>
+            </div>
+          </div>
+          <div class="shows__item">
+            <div class="shows__item__column">
+              <span>THU 17 JANUARY</span>
+              <span>Carrots and Dates</span>
+            </div>
+            <div class="shows__item__column--end">
+              <span>Windsor, ON, Canada</span>
+            </div>
+          </div>
+          <div class="shows__item">
+            <div class="shows__item__column">
+              <span>SAT 26 JANUARY</span>
+              <span>Transition to Betterness Gala</span>
+            </div>
+            <div class="shows__item__column--end">
+              <span>Windsor, ON, Canada</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="feed">
-      <div class="feed-header"> 
-        <span class="title">instagram</span>
-      </div>
-      <div id="instafeed" class="center-items"></div>
-    </div>
-    <div class="feed">
-      <div class="feed-header">
-        <span class="title">youtube</span>
-      </div>
-      <div id="youtubefeed" class="center-items">
-        <div class="video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/gVbLv9NjJMM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/NHKsOxpmA1U?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div id="youtubefeed-mobile-only" class="center-items">
-        <a href="https://www.youtube.com/embed/gVbLv9NjJMM?rel=0"><div class="pic" style="background-image:url('assets/images/youtube-thumb.png');"></div></a>
-      </div>
-    </div>
+
     <div class="footer">
-      <span class="copyright">&copy; Copyright Brendan Scott Friel 2018</span>
+      <a name="footer"></a>
+      <span class="footer__contact">
+        CONTACT THE ARTIST <br /> brendanscottfriel@gmail.com
+      </span>
+      <span class="footer__copy">&copy; Copyright Brendan Scott Friel 2018</span>
     </div>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
