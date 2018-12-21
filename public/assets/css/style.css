@@ -256,25 +256,33 @@ body {
 }
 
 @media screen and (max-width: 700px) {
-  h1 { font-size: 30px; }
-  h2 { font-size: 22px; }
   .header {
-    min-height: calc(60vh - 50px); 
+    min-height: 200px;
+  }
+  .hero__headline { 
+    font-size: 25px;
+    text-align: center;
+  }
+  .social {
+    justify-content: center;
+    margin: 10px auto;
+  }
+  .navbar--vertical {
+    display: none;
   }
   .feed {
+    flex-direction: column;
+  }
+  .feed__row--wide {
     flex-direction: column;
   }
   #instafeed > a:not(:first-child) {
     display: none;
   }
-  #youtubefeed {
-    display: none;
+  .shows__item {
+    flex-direction: column;
   }
-  #youtubefeed-mobile-only {
-    display: flex;
-  }
- .copyright {
-    color: whitesmoke;
-    font-size: 15px;
+  .shows__item__column--end {
+    align-items: flex-start;
   }
 }
