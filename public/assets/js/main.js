@@ -1,7 +1,9 @@
 $(document).ready(function() {
-  var token = '3016048789.28578ca.c7bf8046303941fda6ea61b6f97e5eee',
-  userid = 3016048789,
-  num_photos = 4; 
+  AOS.init();
+  
+  let token = '3016048789.28578ca.c7bf8046303941fda6ea61b6f97e5eee';
+  let userid = 3016048789;
+  let num_photos = 4; 
 
   $.ajax({
     url: 'https://api.instagram.com/v1/users/' + userid + '/media/recent', // or /users/self/media/recent for Sandbox
@@ -11,9 +13,17 @@ $(document).ready(function() {
     success: function(data){
       var list = $('#instafeed');
       for( x in data.data ){
-        var image = data.data[x];
-        console.log(image);
-        list.append('<a style="text-decoration: none;" href="'+image.link+'" target="_blank"><div data-likes="'+image.likes.count+'" class="feed__row__item--instagram pic" style="background-image:url('+image.images.low_resolution.url+');"><span class="overlay"><i class="fas fa-heart"></i> '+image.likes.count+'</span></div></a>');
+        let imageData = data.data[x];
+
+        var imageDiv = $('<div>',{
+          class: 'feed__row__item instagram',
+          click: function() {
+            window.open(imageData.link);
+          }
+        });
+        imageDiv.attr('style', `background-image: url(${imageData.images.standard_resolution.url})`);
+        imageDiv.append(`<span class="overlay"><i class="fas fa-heart"></i>${imageData.likes.count}</span>`);
+        list.append(imageDiv);
       }
     },
     error: function(data){

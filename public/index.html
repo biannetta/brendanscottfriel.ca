@@ -27,54 +27,61 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- Font Awesome -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
     <!-- Stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel='stylesheet' href='assets/css/style.css' />
-    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/components/aos/dist/aos.css" />
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script async src='assets/js/main.js' type='text/javascript'></script>
-
+    <script defer src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script defer src="assets/components/aos/dist/aos.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script defer src='assets/js/main.js' type='text/javascript'></script>
+    
     <!-- App Manifesto -->
     <link rel="manifest" href="manifest.json" />
   </head>
   <body>
-    
     <div class="header">
       <div class="hero">
         <span class="hero__headline">brendan scott friel</span>
         <div class="social">
-            <a class="social__link" href="https://www.facebook.com/brendanscottfriel"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-            <a class="social__link" href="https://www.instagram.com/brendanscottfriel/?hl=en"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-            <a class="social__link" href="https://open.spotify.com/artist/5vNnd22Abu2VEsMZFdbRYQ"><i class="fab fa-spotify" aria-hidden="true"></i></a>
-            <a class="social__link" href="https://itunes.apple.com/ca/album/quiet-cars/1206176776"><i class="fab fa-apple" aria-hidden="true"></i></a>
-          </div>
+          <a class="social__link" href="https://www.facebook.com/brendanscottfriel"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          <a class="social__link" href="https://www.instagram.com/brendanscottfriel/?hl=en"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a class="social__link" href="https://open.spotify.com/artist/5vNnd22Abu2VEsMZFdbRYQ"><i class="fab fa-spotify" aria-hidden="true"></i></a>
+          <a class="social__link" href="https://itunes.apple.com/ca/album/quiet-cars/1206176776"><i class="fab fa-apple" aria-hidden="true"></i></a>
+        </div>
       </div>
-      <div class="navbar--vertical">
-        <a href="#music" class="navbar__item">&nbsp;&nbsp;music&nbsp;</a>
-        <a href="#social" class="navbar__item">&nbsp;&nbsp;social&nbsp;</a>
-        <a href="#videos" class="navbar__item">&nbsp;&nbsp;videos&nbsp;</a>
-        <a href="#shows" class="navbar__item">&nbsp;&nbsp;shows&nbsp;</a>
-        <a href="#footer" class="navbar__item">&nbsp;&nbsp;contact&nbsp;</a>
+      <div class="navbar navbar--vertical">
+        <a href="#music" class="navbar__item navbar__item--impact">&nbsp;&nbsp;music&nbsp;</a>
+        <a href="#social" class="navbar__item navbar__item--impact">&nbsp;&nbsp;social&nbsp;</a>
+        <a href="#videos" class="navbar__item navbar__item--impact">&nbsp;&nbsp;videos&nbsp;</a>
+        <a href="#shows" class="navbar__item navbar__item--impact">&nbsp;&nbsp;shows&nbsp;</a>
+        <a href="#footer" class="navbar__item navbar__item--impact">&nbsp;&nbsp;contact&nbsp;</a>
       </div>
-      <!-- <div class="tagline--center">
-        "Quiet Cars"</br> Available Now
-      </div> -->
     </div>
     
+    <div class="navbar navbar--fixed-top" data-aos="fade-in" data-aos-anchor="#music">
+      <a href="#music" class="navbar__item">&nbsp;&nbsp;music&nbsp;</a>
+      <a href="#social" class="navbar__item">&nbsp;&nbsp;social&nbsp;</a>
+      <a href="#videos" class="navbar__item">&nbsp;&nbsp;videos&nbsp;</a>
+      <a href="#shows" class="navbar__item">&nbsp;&nbsp;shows&nbsp;</a>
+      <a href="#footer" class="navbar__item">&nbsp;&nbsp;contact&nbsp;</a>
+      <div class="social">
+        <a class="social__link" href="https://www.facebook.com/brendanscottfriel"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+        <a class="social__link" href="https://www.instagram.com/brendanscottfriel/?hl=en"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a class="social__link" href="https://open.spotify.com/artist/5vNnd22Abu2VEsMZFdbRYQ"><i class="fab fa-spotify" aria-hidden="true"></i></a>
+        <a class="social__link" href="https://itunes.apple.com/ca/album/quiet-cars/1206176776"><i class="fab fa-apple" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
     <div class="body">
       <!-- Music -->
-      <div class="feed">
+      <div id="music" class="feed">
         <a name="music"></a>
         <span class="feed__header">&nbsp;&nbsp;music&nbsp;</span>
-        <div class="feed__row--wide">
-          <div class="feed__row__item--center">
+        <div class="feed__row feed__row--wide">
+          <div class="feed__row__item feed__row__item--center" id="albumcover">
             <img src="assets/images/album-cover.jpg" />
             <span class="tagline">Debut Album available on Spotify and iTunes</span>
           </div>
@@ -113,31 +120,22 @@
         <a name="shows"></a>
         <span class="feed__header">&nbsp;&nbsp;shows&nbsp;</span>
         <div class="shows">
-          <div class="shows__item">
+         <div class="shows__item">
             <div class="shows__item__column">
-              <span>SAT 22 DECEMBER</span>
-              <span>Kelseys Original Roadhouse</span>
+              <span>SAT 10 August</span>
+              <span>Kingsville Folk Music Festival 2019</span>
             </div>
-            <div class="shows__item__column--end">
-              <span>Windsor, ON, Canada</span>
+            <div class="shows__item__column shows__item__column--end">
+              <span>Kingsville, ON, Canada</span><span><a href="https://kfmf2019.brownpapertickets.com/">Get Tickets</a></span>
             </div>
           </div>
           <div class="shows__item">
             <div class="shows__item__column">
-              <span>THU 17 JANUARY</span>
-              <span>Carrots and Dates</span>
+              <span>SAT 10 August</span>
+              <span>Kingsville Folk Music Festival 2019</span>
             </div>
-            <div class="shows__item__column--end">
-              <span>Windsor, ON, Canada</span>
-            </div>
-          </div>
-          <div class="shows__item">
-            <div class="shows__item__column">
-              <span>SAT 26 JANUARY</span>
-              <span>Transition to Betterness Gala</span>
-            </div>
-            <div class="shows__item__column--end">
-              <span>Windsor, ON, Canada</span>
+            <div class="shows__item__column shows__item__column--end">
+              <span>Kingsville, ON, Canada</span><span><a href="https://kfmf2019.brownpapertickets.com/">Get Tickets</a></span>
             </div>
           </div>
         </div>
@@ -152,6 +150,9 @@
       <span class="footer__copy">&copy; Copyright Brendan Scott Friel 2018</span>
     </div>
 
+    <script>
+      AOS.init();
+    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110377358-1"></script>
     <script>
